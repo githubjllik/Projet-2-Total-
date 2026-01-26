@@ -1,0 +1,4 @@
+Génère une image 
+une main tient un smartphone 
+- scan un produit avec comme nom "Total"
+Dans le l'image on fait que comprendre que ce produit effectue une entrée ou une sortie

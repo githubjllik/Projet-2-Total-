@@ -1,0 +1,101 @@
+Crée une application mobile flutter hors-ligne
+C'est une application de gestion d'inventaire utilisant le code-barres et le QR code 
+
+On doit utiliser la/les couleurs de l'entreprise connue Totaltools, car c'est pour un quincaillerie de cette entreprise qu'on conçoit cette application
+
+Voici les couleurs de base :
+Primaire : #308A91 (93% Teal) - #006D70 (95% Dark Turquoise )
+Secondaire : #E52312 (Boston University Red)
+Tertiaire : #99B2BB (90% Powder blue)
+
+Pour se connecter l'utilisateur doit utiliser un QR code, soit en scannant ou on importe l'image du qr code 
+Si QR code indisponible = PIN de secours  
+
+L'application doit dire bonjour ou bonsoir à l'utilisateur qui vient de se connecter 
+
+Je veux un assistant parlant (narrateur) qui parle quand c'est nécessaire, pas tout le temps 
+
+Je veux une application simpliste, trop facile à utiliser, trop facile à comprendre, qui ne fait pas peur du tout
+
+Dans l'interface tout doit être claire pour l'utilisateur 
+
+Je veux que tout soit accompagné d'un icône, l'icône= la compréhension, un texte simple peut porter confusion, alors qu'avec un icône on comprend vite son utilité 
+Tout doit être équipé d'un icône correspondant
+
+Pas trop des champs de saisie, pas trop des formulaires avec plusieurs champs, 
+
+Ce que veut ici, c'est représenter la simplicité à l'état pur, on ne veut pas que l'utilisateur tape tout le temps, écrit tout le temps, réfléchi trop, soit perturbé par plusieurs informations, faut même pas qu'il parle trop, demande trop, ... On veut créer un système où les utilisateurs n'auront pas besoin de trop écrire, parler, réfléchir,....
+
+Le système doit penser à tout, à chaque type d'utilisateur :
+- ceux qui n'aime pas lire
+- ceux qui n'aime pas trop écrire 
+- ceux qui voient mal
+- ceux qui ont toujours la flemme 
+- ceux qui stress trop (fréquent lors des activités)
+
+On veut délivrer les utilisateurs de ça, voilà pourquoi on opte pour une réponse rapide (QR), des solutions de QR code, code-barres qui font avancer les choses à la vitesse de l'éclair, sans stress, PRÉCISON garantie, sûreté, confiance...
+
+
+On aura :
+- une zone de messages (suivi)/notification:
+Comme les SMS 
+Ça pourrait dire tout ce qui se passe:
+ * produit en rupture (surtout ça)
+ * produit entrée 
+ * produit sortie 
+ * tel agent vient de faire ceci, cela 
+ * Vous venez de faire ceci cela
+ * 5 produits doivent être réapprovisionner dont...
+ * Félicitations vous avez réaliser une vente de ...
+ * Félicitations vous venez de réaprovisonner ....
+
+Exactement comme des messages réseaux SMS
+
+Pour des alertes de rupture de stock, j'ai envisagé, un système similaire à une appel téléphonique :
+- l'admin ou le responsable de stock reçoit cet appel 
+Tout doit fonctionner exactement comme une véritable appel téléphonique
+il décroche et le système lui parle :
+" Bonjour/Bonsoir M..., Vos produits... sont en ruptures vous devez envisager de réapprovisonner avant d'être en cours, merci.."
+En plus de cela une message est envoyé après cet appel pour garantir l'attention, le rappel
+
+Concernant la langue de l'application, on utilisera :
+- la langue du système : car dans le téléphone d'un utilisateur, c'est exactement ça qu'il comprend.
+
+- le français (comme langue par défaut): la langue avec laquelle on a coder l'application.
+
+Concernant le mode/thème (sombre/light) de l'application, on utilisera :
+- le mode du système : car ça doit être ça la préférence première d'un utilisateur.
+
+on lui donnera aussi la possibilité de choisir dans l'application car il peut trouver mieux l'autre thème dans cette application.
+
+
+On aura une zone pour :
+- vérifier l'état de Stock d'un produit 
+- faire entrée : s'approvisionner 
+- vendre
+- retirer
+- modifier (concernant le produit dont ont veux mettre à jour ses informations comme : le nom, le prix, l'emplacement,...)
+- Administrer (créer des postes, des rôles, des droits, gérer les employés)
+- Taux de change (important : en RDC cela influence beaucoup sur le prix des produits, ça faire augmenter les prix ou diminuer, on utilise le dollar ($) et le franc congolais (FC), c'est le franc congolais qui dépend du taux de dollars car la majorité des prix sont notés en franc congolais), cela permettra de changer la totalité de chaque prix en une seul en fonction du taux de dollars actuel 
+- Feuille d'inventaire
+
+
+Faut donner des noms en français:
+- que ce soit les noms des fichiers
+- que ce soit les noms dans les codes (fonctions, variables, constantes,...)
+Tout doit être en français (FR)
+
+Je ne suis pas un développeur flutter
+Faut aussi commenter les codes :
+=> On doit devoir identifier chaque élément d'interface dans le code, faut montrer cet élément, ses fonctionnalités liés, ses styles liés,... etc
+C'est ainsi qu'on comprend un code en faisant des liasions:
+cet élément dans l'interface = ceci dans le code, sa fonctionalité c'est ça, son style c'est ça (sa couleur, sa police, sa taille, son emplacement,...) 
+Et aussi des liasons internes dans les codes avec d'autres fichiers du projet, on doit comprendre les liaisons, d'où viennent les fonctionnalités, ça provient , pourquoi tel et tel ficihier sont liés,...
+
+Faut interpréter ce que fais un code, exemple :
+- ce code permet au bouton... d'afficher ceci ...
+- ce code sert à lié ceci... et cela...
+- ce code sert à ouvrir ....
+- ce code permet d'enregister... dans...
+- ce code permet à l'utilisateur de ...
+Surtout avec les éléments d'interfacz

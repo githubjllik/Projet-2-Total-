@@ -1,0 +1,237 @@
+<!-- likulajeanlouis08 -->
+<!-- GLM-4.7-N -->
+<prompt>
+  Crée une application mobile avec flutter, dis-moi quoi faire, quoi mettre, où le faire, comment, faut tout me dire 
+
+L'application doit scanner des codes-barres et des qr code 
+Doit générer des codes-barres (images) et des qr code (images)
+Doit prendre des photos et doit importer des images
+
+C'est tout , une Simple application de quelques minutes
+</prompt>
+<div>
+  C'est parti ! Puisque tu veux une solution rapide et fonctionnelle, nous allons utiliser les packages les plus populaires et les plus simples de l'écosystème Flutter.
+
+Voici le guide étape par étape, du début à la fin.
+
+### 1. La Préparation (Où le faire ?)
+
+Ouvre ton éditeur de code (VS Code ou Android Studio) et assure-toi d'avoir un projet Flutter. Si tu n'en as pas, ouvre un terminal et tape :
+
+```bash
+flutter scan_qr_app
+cd scan_qr_app
+```
+
+### 2. Les Dépendances (Quoi mettre ?)
+
+Ouvre le fichier `pubspec.yaml` à la racine de ton projet. C'est ici qu'on dit à Flutter quelles "bibliothèques" télécharger.
+
+Ajoute ces 4 lignes dans la section `dependencies` :
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Pour scanner et générer
+  mobile_scanner: ^5.0.0
+  qr_flutter: ^4.1.0
+  
+  # Pour la caméra et les images
+  image_picker: ^1.0.7
+```
+
+**Ensuite, installe-les :**
+Ouvre un terminal à la racine du projet et tape :
+```bash
+flutter pub get
+```
+
+---
+
+### 3. Le Code (Comment le faire ?)
+
+C'est ici que la magie opère. Pour faire simple, nous allons tout mettre dans le fichier principal : `lib/main.dart`.
+
+Supprime tout le contenu de `lib/main.dart` et colle ce code complet. J'ai ajouté des commentaires pour que tu comprennes chaque partie.
+
+```dart
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart'; // Pour scanner
+import 'package:qr_flutter/qr_flutter.dart'; // Pour générer le QR
+import 'package:image_picker/image_picker.dart'; // Prendre photo / Importer
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Scan & Gen',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  // Variable pour stocker le résultat du scan
+  String scannedCode = 'Aucun code scanné';
+  
+  // Variable pour stocker l'image prise
+  File? selectedImage;
+
+  // Méthode pour générer un QR Code (on retourne un Widget Image)
+  Widget generateQrCode(String data) {
+    return QrImageView(
+      data: data,
+      version: QrVersions.auto,
+      size: 200.0,
+    );
+  }
+
+  // Méthode pour prendre une photo ou importer
+  Future<void> pickImage(ImageSource source) async {
+    final picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: source);
+
+    if (image != null) {
+      setState(() {
+        selectedImage = File(image.path);
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Super App Scan/Gen')),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // --- SECTION 1 : SCANNER ---
+            const Text("1. Scanner un Code", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 10),
+            Container(
+              height: 250,
+              decoration: BoxDecoration(border: Border.all(color: Colors.blue)),
+              child: MobileScanner(
+                onDetect: (BarcodeCapture capture) {
+                  final List<Barcode> barcodes = capture.barcodes;
+                  if (barcodes.isNotEmpty) {
+                    // On récupère la valeur brute
+                    final String? code = barcodes.first.rawValue;
+                    if (code != null) {
+                      setState(() {
+                        scannedCode = code;
+                      });
+                    }
+                  }
+                },
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text('Résultat : $scannedCode'),
+            const Divider(height: 40),
+
+            // --- SECTION 2 : GÉNÉRER ---
+            const Text("2. Générer un QR Code", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 10),
+            Center(
+              child: generateQrCode(scannedCode == 'Aucun code scanné' ? 'Hello Flutter' : scannedCode),
+            ),
+            const Divider(height: 40),
+
+            // --- SECTION 3 : IMAGES ---
+            const Text("3. Photos", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton.icon(
+                  onPressed: () => pickImage(ImageSource.camera),
+                  icon: const Icon(Icons.camera_alt),
+                  label: const Text("Caméra"),
+                ),
+                ElevatedButton.icon(
+                  onPressed: () => pickImage(ImageSource.gallery),
+                  icon: const Icon(Icons.photo_library),
+                  label: const Text("Galerie"),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            if (selectedImage != null)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.file(selectedImage!, height: 200, fit: BoxFit.cover),
+              )
+            else
+              const Text("Aucune image sélectionnée"),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+---
+
+### 4. Configuration Android & iOS (Indispensable)
+
+Si tu ne fais pas ça, l'application plantera quand tu essaieras d'ouvrir la caméra.
+
+#### Pour Android (`android/app/src/main/AndroidManifest.xml`)
+Ajoute ces permissions dans la balise `<manifest>` (avant `<application>`):
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+
+*Assure-toi aussi que le `minSdkVersion` dans ton `build.gradle` est au moins 21 (c'est généralement le cas par défaut).*
+
+#### Pour iOS (`ios/Runner/Info.plist`)
+Ajoute ces clés dans le fichier `<dict>` :
+
+```xml
+<key>NSCameraUsageDescription</key>
+<string>Nous avons besoin de la caméra pour scanner des codes</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Nous avons besoin d'accéder à vos photos pour importer des images</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Nous avons besoin d'enregistrer des photos</string>
+```
+
+### 5. Lance l'application
+
+Branche ton téléphone (ou lance l'émulateur) et tape :
+
+```bash
+flutter run
+```
+
+### Résumé de ce que tu as maintenant :
+1.  **Scan :** La carré bleu en haut utilise ta caméra pour lire QR et Code-barres.
+2.  **Génération :** Le widget en dessous crée une image QR Code à partir du texte scanné (ou "Hello Flutter" par défaut). *Note : Pour générer un code-barres standard (EAN), il faut une librairie spécifique comme `barcode`, mais `qr_flutter` gère très bien les QR codes.*
+3.  **Photos :** Les deux boutons en bas permettent soit de prendre une photo, soit d'en choisir une dans la galerie, et elle s'affiche juste en dessous.
+
+C'est une application "Minimal Viable Product" (MVP), elle fonctionne et elle est prête en quelques minutes !
+</div>

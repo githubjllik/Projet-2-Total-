@@ -1,0 +1,43 @@
+Pour mon projet flutter (application mobile) j'aurai besoin de :
+
+utiliser un code barre déjà existant (qui existe déjà sur un produit) : scan pour l'enregistrer comme nouveau
+
+utiliser un QR code  déjà existant : scan pour l'enregistrer comme nouveau
+
+générer des codes barres et qr code, des images des qr code, codes barres que je peux ensuite scanner
+
+les fonctionnalités de scan et génération doivent se faire même hors-ligne
+
+l'application doit fonctionner hors-ligne, et en ligne si possible car les données des appareils doivent posséder les mêmes informations, un utilisateur peut accéder depuis un autre téléphone
+
+prendre des photos du produit, 
+
+Utiliser la caméra,
+
+Importer des images, 
+
+générer des PDF
+
+Exporter des pdf
+
+avoir un son, exemple beep lors d'un scan
+
+
+...etc
+
+
+Faut que je fasse un test de chaque fonctionnalités à la fin, donc on doit créer une  petit test de tous les fonctionnalités 
+
+Montre-moi comme l'on installe, pas à pas , étapes par étapes, point à point, dis-moi Quoi faire, comment faire, où le faire, où trouver, quoi mettre, quoi faire ensuite,... Faut tout me dire, tout me montrer, ...
+
+Tout sur tout, n'oublie rien, ne néglige rien 
+
+
+Note : je suis un débutant, j'ai flutter, j'ai installé tout ce qu'il faut, je sais comment créer et exécuter un projet 
+C'est tout que je sais faire 
+Donc dans tout ce qu'on doit faire, il faut mettre des commentaires, et ces commentaires doivent me faire comprendre, ce qui se passe réellement, et ça doit être comme si c'est moi-même qui l'écrit et non reçu.
+
+Note : Tout ce qu'on doit utiliser doit être hors-ligne, gratuit à vie, toujours accessible, à jour, récent,....
+
+
+Note : mes projets flutter pour tester, je les exécuter depuis mon appareil Android, connecté à un USB, c'est la méthode que j'avais appris, car je n'avais pas installé Android studio, juste le SDK commands lines tools,...

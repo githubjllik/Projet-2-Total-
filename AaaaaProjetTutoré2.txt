@@ -1,0 +1,42 @@
+
+
+- VÉRIFIER EN STOCK (Voir tous les informations sur un produit : emplacement, quantité, prix)
+- APPROVISIONNER (AJOUT): Nouveau produit détecté, donnez les informations sur ce produit, les produits enregistré s'ajoute automatiquement via scan
+- ALERTE RUPTURE (COMMANDER)
+- VENDRE (SORTIE)
+- PERTE > scan > motif > ok
+- FEUILLE D'INVENTAIRE > choisir l'ordre (Lister selon): NOM(NOM DE PRODUIT (A-Z) NOM DE CATÉGORIE (A-Z), NOM D'EMPLACEMENT (A-Z) NOM DES RAYONS (A-Z)), VENTE (plus vendu - moins, monis-plus), STOCK, PERTE, DATE DE PÉREMPTION
+- MODIFIER > scan > Que voulez-vous modifier sur ce produit : 
+NOM, EMPLACEMENT, QUANTITÉ, PRIX, DATE DE PÉREMPTION...
+(Ancien-vs-Nouveau)
+- LANGUE (HORS-LIGNE): HINDOU, LINGALA, FRANÇAIS 
+- THÈME : SOMBRE 
+- chiffre d'affaires 
+- ADMINISTRER : Créer des postes, donner des droits (Ajouter, Consulter, modifier, supprimer),  des rôles (Admin, Caissier, facturier, magasinier, réceptionniste, responsable de stock) 
+Utilisateur = Qr code 
+PAS BESOIN D'ÉCRIRE, DE TAPER, DE MÉMORISER
+Authentification = scanner ou importer son QR code
+=> On peut utiliser le QR code directement depuis sa carte d'électeur 
+Si QR code indisponible= PIN de secours 
+
+Note ici on ne parle pas trop, on ne demande pas trop, on écrit pas trop, on ne réfléchit pas trop, on garde toujours de l'énergie :
+- utilisateur= QR code
+- client = QR code 
+- entrée= QR code 
+- sortie = QR code 
+
+Présentation feuille d'inventaire :
+- Date début (date du premier enregistrement dans la base de données bd)
+- Date fin : date actuel
+- Durée (nombre des jours/mois/année durant cette période)
+C'EST LE SEUL TRI QU'IL Y'AURA
+L'UTILISATEUR PEUT TOUT MODIFIER SANS DÉPASSER LA DATE DU DÉBUT ET DE LA FIN
+
+
+VENDRE= FAIRE SORTIE UN PRODUIT EN STOCK 
+APPROVISIONNER= FAIRE ENTRER
+
+Un reéceptionniste peur vérifier rapidement si le produit désiré par le client est disponible en stock pour éviter que le client fasse des longues démarches inultiles pour q'on lui disentau final que son produit n'est pas en stoks
+
+PAS BESOIN D'ÉCRIRE, LA SEUL FOIS OÙ L'ON ÉCRIT C'EST AU MOMENT D'UN PRODUIT NOUVEAU EN STOCK OU LORSQUE LA CAMÉRA NE PEUT PAS LIRE UN QR CODE
+DES OPTIONS SIMPLES, PAS DES TABLEAUX, PAS TROP D'INFORMATION À LA FOIS, AU FUTUR IL SERA SYNCHRONISER AU SYSTÈME EXISTANT
