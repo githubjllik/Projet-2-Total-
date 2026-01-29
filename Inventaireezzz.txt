@@ -1,0 +1,127 @@
+Pour qu’un inventaire soit vraiment utile (et pas juste une liste de quantités), il faut enregistrer les bonnes informations. On peut les regrouper en 4 grandes catégories 👇
+
+
+---
+
+1️⃣ Informations d’identification du produit
+
+👉 Pour savoir exactement de quoi on parle
+
+Code article / référence unique
+
+Nom du produit
+
+Catégorie / famille
+
+Description (taille, couleur, modèle…)
+
+Code-barres / QR code
+
+Fournisseur principal
+
+
+
+---
+
+2️⃣ Informations de quantité (le cœur de l’inventaire)
+
+👉 Pour savoir ce qu’on a vraiment
+
+Quantité en stock
+
+Entrées (achats, retours)
+
+Sorties (ventes, consommation, pertes)
+
+Stock théorique
+
+Stock réel (après comptage)
+
+Écart d’inventaire
+
+Unité de mesure (pièce, kg, litre…)
+
+
+
+---
+
+3️⃣ Informations de gestion et de pilotage
+
+👉 Pour anticiper et décider
+
+Stock minimum / seuil d’alerte
+
+Stock maximum
+
+Quantité à commander
+
+Délai de réapprovisionnement
+
+Fréquence de rotation
+
+Date de dernière mise à jour
+
+Localisation (entrepôt, rayon, zone)
+
+
+
+---
+
+4️⃣ Informations financières et réglementaires
+
+👉 Pour l’argent et la conformité
+
+Prix d’achat
+
+Coût moyen pondéré (CMP)
+
+Valeur du stock
+
+Date de péremption (si applicable)
+
+Numéro de lot / traçabilité
+
+Conditions de stockage
+
+Taux de casse / perte
+
+
+
+---
+
+🔹 Bonus (selon l’activité)
+
+Numéro de série (informatique, électronique)
+
+Température de stockage (agro / pharma)
+
+Statut produit (actif, dormant, obsolète)
+
+Historique des mouvements
+
+Responsable du stock
+
+
+
+---
+
+En résumé 🧠
+
+Un bon inventaire répond à 5 questions clés :
+
+Quoi ? (produit)
+
+Combien ? (quantité)
+
+Où ? (localisation)
+
+Quand ? (dates, mouvements)
+
+Combien ça vaut ? (valeur)
+
+
+Si tu veux, je peux :
+
+te faire un modèle de fiche d’inventaire
+
+ou adapter la liste à ton secteur précis (commerce, restauration, industrie, pharmacie, etc.)

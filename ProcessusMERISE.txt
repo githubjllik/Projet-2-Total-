@@ -1,0 +1,4 @@
+On peut avoir les processus ci-dessous:
+1. Processus d'approvisionnement: Gestion d'achats
+2. Processus de vente : Gestion de ventes
+3. Processus d'inventaire : Gestion d'inventaire , c'est ici que notre projet est CONSTRUIT.

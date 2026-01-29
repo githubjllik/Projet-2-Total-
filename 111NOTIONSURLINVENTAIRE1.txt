@@ -1,0 +1,141 @@
+"""""
+Et la sortie ?
+C'est quoi la sortie ?
+Quel est la différence avec la vente ?
+"""""
+
+
+
+Parfait, là on touche au cœur de la gestion d’inventaire 👌
+Je vais faire simple et clair.
+
+
+---
+
+🔹 C’est quoi une sortie en gestion d’inventaire ?
+
+Une sortie = toute diminution de stock, peu importe la raison.
+
+👉 Dès qu’un article quitte le stock, on parle de sortie.
+
+Exemples de sorties :
+
+utilisation interne (consommables),
+
+transfert vers un autre dépôt,
+
+prêt (matériel informatique, livres),
+
+don,
+
+casse / perte / péremption,
+
+vente.
+
+
+👉 Donc : toute vente est une sortie,
+👉 mais toute sortie n’est pas une vente.
+
+
+---
+
+🔹 C’est quoi une vente ?
+
+Une vente est un cas particulier de sortie.
+
+Elle implique :
+
+un client,
+
+un paiement (ou une facture),
+
+un prix,
+
+un aspect légal / comptable.
+
+
+👉 La vente touche à :
+
+la facturation,
+
+la comptabilité,
+
+le chiffre d’affaires.
+
+
+
+---
+
+🔹 Différence claire (tableau simple)
+
+Élément	Sortie	Vente
+
+Diminue le stock	✅	✅
+Nécessite un client	❌	✅
+Nécessite un prix	❌	✅
+Génère un paiement	❌	✅
+Impact comptable	❌ (pas toujours)	✅
+Obligatoire dans un inventaire	✅	❌
+
+
+
+---
+
+🔹 Exemple concret
+
+Tu as 100 stylos en stock.
+
+Tu donnes 10 stylos au personnel → sortie
+
+Tu jettes 5 stylos cassés → sortie
+
+Tu vends 20 stylos à un client → vente (donc sortie)
+
+Tu déplaces 15 stylos vers un autre dépôt → sortie
+
+
+Le stock final baisse à chaque fois, même sans vente.
+
+
+---
+
+🔹 Comment on modélise ça dans une application ?
+
+Bonne pratique :
+
+Mouvement de stock
+
+type : entrée | sortie | ajustement
+
+raison : vente | usage | perte | transfert | don
+
+
+Vente = module séparé
+
+crée automatiquement une sortie de stock
+
+
+
+👉 L’inventaire reste simple et réutilisable.
+
+
+---
+
+🧠 Résumé ultra-court
+
+Sortie = diminution de stock
+
+Vente = sortie + client + paiement
+
+La vente n’est pas obligatoire
+
+La sortie est fondamentale
+
+
+Si tu veux, je peux t’aider à :
+
+dessiner un schéma de base de données,
+
+définir les fonctions minimales d’une appli d’inventaire,
+
+ou reformuler ça pour un exposé / rapport.

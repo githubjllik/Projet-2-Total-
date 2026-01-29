@@ -39,10 +39,11 @@ On veut délivrer les utilisateurs de ça, voilà pourquoi on opte pour une rép
 On aura :
 - une zone de messages (suivi)/notification:
 Comme les SMS 
-Ça pourrait dire tout ce qui se passe:
- * produit en rupture (surtout ça)
- * produit entrée 
- * produit sortie 
+On pourrait suivre tout ce qu'ob possède en temps réel:
+ * Tel produit est en stock faible
+ * Tel produit est en rupture
+ * L'agent tel... vient de faire entrée tel quantité de produit, on a desormais ...
+ * L'agent tel... vient de faire sortie tel quantité de produit, on a désormais ... 
  * tel agent vient de faire ceci, cela 
  * Vous venez de faire ceci cela
  * 5 produits doivent être réapprovisionner dont...
@@ -55,8 +56,9 @@ Pour des alertes de rupture de stock, j'ai envisagé, un système similaire à u
 - l'admin ou le responsable de stock reçoit cet appel 
 Tout doit fonctionner exactement comme une véritable appel téléphonique
 il décroche et le système lui parle :
-" Bonjour/Bonsoir M..., Vos produits... sont en ruptures vous devez envisager de réapprovisonner avant d'être en cours, merci.."
+" Bonjour/Bonsoir M..., Vos produits... sont en stock faibles il ne reste que tel quantité en stock... vous devez envisager de réapprovisonner avant d'être en cours, merci.."
 En plus de cela une message est envoyé après cet appel pour garantir l'attention, le rappel
+Note : cette fonctionnalité concerne uniquement l'admin ou le responsable d'inventaire/de stock
 
 Concernant la langue de l'application, on utilisera :
 - la langue du système : car dans le téléphone d'un utilisateur, c'est exactement ça qu'il comprend.
@@ -70,15 +72,36 @@ on lui donnera aussi la possibilité de choisir dans l'application car il peut t
 
 
 On aura une zone pour :
-- vérifier l'état de Stock d'un produit 
-- faire entrée : s'approvisionner 
-- vendre
-- retirer
-- modifier (concernant le produit dont ont veux mettre à jour ses informations comme : le nom, le prix, l'emplacement,...)
+- vérifier/contrôle/Consulter l'état de Stock d'un produit
+- Entrée
+- Sortie 
+- Ajustement/modifier/Corriger (concernant le produit dont ont veux mettre à jour ses informations comme : le nom, le prix, l'emplacement,...)
 - Administrer (créer des postes, des rôles, des droits, gérer les employés)
-- Taux de change (important : en RDC cela influence beaucoup sur le prix des produits, ça faire augmenter les prix ou diminuer, on utilise le dollar ($) et le franc congolais (FC), c'est le franc congolais qui dépend du taux de dollars car la majorité des prix sont notés en franc congolais), cela permettra de changer la totalité de chaque prix en une seul en fonction du taux de dollars actuel 
 - Feuille d'inventaire
 
+
+ENTREE :
+Lorsqu'on scanne une entrée :
+Entrée> scan> nouveau (enregistrer le nouveau qui n'existe pas encore)
+Entrée> scan > mise à jour (faire +n au produit qui existe déjà)
+motif : Nouveau, Mise à jour, don, retour 
+
+Entrée = ajout et un ajout peu avoir plusieurs natures/peut être de plusieurs natures
+
+Méthode saisie entrée :
+Rechecher le nom du produit 
+- si trouver : sélectionner , faire l'ajout (+n) 
+- si non trouver : proposer enregistrer
+
+Sortie > scan > motif : Vente, retour, péremption, abimé, prêt
+
+* Lorsque c'est nouveau = on enregistre, on crée = on ajoute
+* Lorsqu'il existait déjà = on fait une mise à jour 
+
+
+CAS DE Sortie :
+- Produit non enregistrée détectée = À signaler 
+Car pour faire sortie un produit, faut qu'il soit d'abord entrée/enregistrée.
 
 Faut donner des noms en français:
 - que ce soit les noms des fichiers

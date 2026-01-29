@@ -1,0 +1,244 @@
+Ahhh excellente question 😄
+Les alertes, c’est ce qui transforme un inventaire “passif” en outil intelligent.
+
+
+---
+
+🔹 C’est quoi une alerte en gestion d’inventaire ?
+
+Une alerte = un signal automatique qui prévient qu’une situation anormale ou critique est en train d’arriver (ou est déjà arrivée).
+
+👉 Objectif : agir avant que ça devienne un problème.
+
+
+---
+
+🔹 Pourquoi les alertes sont importantes ?
+
+Sans alertes :
+
+tu découvres une rupture trop tard,
+
+tu perds du temps à vérifier manuellement,
+
+tu subis les problèmes.
+
+
+Avec alertes :
+
+tu anticipes,
+
+tu sécurises le stock,
+
+tu prends de meilleures décisions.
+
+
+
+---
+
+🔹 Quels types d’alertes gérer dans une application d’inventaire ?
+
+1️⃣ Alerte de stock minimum (la plus classique)
+
+Quand :
+
+> quantité actuelle ≤ quantité minimale
+
+
+
+Exemple :
+
+seuil minimum : 10
+
+stock actuel : 9
+👉 Alerte : stock faible
+
+
+
+---
+
+2️⃣ Alerte de rupture de stock
+
+Quand :
+
+> quantité = 0
+
+
+
+👉 Article indisponible, action urgente.
+
+
+---
+
+3️⃣ Alerte de surstock
+
+Quand :
+
+> quantité > stock maximum
+
+
+
+👉 Immobilisation inutile, risque de perte.
+
+
+---
+
+4️⃣ Alerte de péremption
+
+Pour les produits avec date d’expiration.
+
+Quand :
+
+X jours avant la date limite.
+
+
+👉 Très important pour :
+
+pharmacie,
+
+alimentaire,
+
+hôpital.
+
+
+
+---
+
+5️⃣ Alerte d’inactivité
+
+Quand :
+
+un article n’a pas bougé depuis longtemps.
+
+
+👉 Utile pour détecter :
+
+stock dormant,
+
+articles obsolètes.
+
+
+
+---
+
+6️⃣ Alerte d’anomalie
+
+Quand :
+
+sortie trop grande,
+
+mouvement inhabituel,
+
+ajustement négatif fréquent.
+
+
+👉 Aide à détecter :
+
+erreurs,
+
+vols,
+
+mauvaise utilisation.
+
+
+
+---
+
+🔹 Comment implémenter les alertes dans une application ?
+
+📌 Étape 1 : définir des règles
+
+Par article ou par catégorie :
+
+stock minimum,
+
+stock maximum,
+
+délai de péremption,
+
+seuil d’inactivité.
+
+
+
+---
+
+📌 Étape 2 : surveiller les événements
+
+Les alertes se déclenchent :
+
+après une entrée,
+
+après une sortie,
+
+lors d’un contrôle périodique (cron / tâche planifiée).
+
+
+
+---
+
+📌 Étape 3 : notifier
+
+Types de notification :
+
+message dans l’application,
+
+badge rouge / icône ⚠️,
+
+email,
+
+SMS (optionnel).
+
+
+
+---
+
+🔹 Les alertes sont-elles obligatoires ?
+
+👉 Non, mais…
+
+inventaire simple → optionnel
+
+inventaire professionnel → fortement recommandé
+
+inventaire critique (santé, production) → indispensable
+
+
+
+---
+
+🔹 Bon design d’application
+
+Bonne pratique :
+
+les alertes sont automatiques,
+
+configurables (on/off),
+
+priorisées (info / warning / critique),
+
+traçables (date, état, résolue ou non).
+
+
+
+---
+
+🧠 Résumé express
+
+Alerte = prévention
+
+Basées sur des seuils ou des règles
+
+Déclenchées par les mouvements ou le temps
+
+Pas obligatoires mais très utiles
+
+Font gagner du temps et évitent les erreurs
+
+
+Si tu veux, je peux te montrer :
+
+un exemple concret d’alerte dans une base de données,
+
+ou un scénario complet (entrée → sortie → alerte),
+
+ou t’aider à décider quelles alertes garder pour un projet académique.

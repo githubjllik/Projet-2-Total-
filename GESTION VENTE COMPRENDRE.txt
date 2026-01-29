@@ -1,0 +1,114 @@
+Oui 👍 la gestion des ventes existe bien, mais elle ne fait pas partie de la gestion d’inventaire.
+C’est un domaine à part, même s’ils sont fortement liés.
+
+
+---
+
+🔹 La gestion des ventes : ça existe ?
+
+👉 Oui, clairement.
+On parle de gestion des ventes ou de gestion commerciale.
+
+Elle concerne tout ce qui entoure l’acte de vendre.
+
+
+---
+
+🔹 Que gère la gestion des ventes ?
+
+La gestion des ventes s’occupe de :
+
+clients,
+
+devis,
+
+commandes,
+
+ventes,
+
+factures,
+
+paiements,
+
+remises,
+
+taxes,
+
+chiffre d’affaires.
+
+
+👉 Elle répond surtout à :
+
+> À qui a-t-on vendu ? Quoi ? À quel prix ? Quand ?
+
+
+
+
+---
+
+🔹 Pourquoi ce n’est PAS de l’inventaire ?
+
+Parce que les objectifs sont différents :
+
+Gestion d’inventaire	Gestion des ventes
+
+Suivre les quantités	Générer des revenus
+Contrôler le stock	Gérer les clients
+Entrées / sorties	Factures / paiements
+Aspect logistique	Aspect commercial & financier
+
+
+👉 L’inventaire ne s’intéresse pas à l’argent.
+👉 La vente ne s’intéresse pas d’abord au stock, mais au client et au paiement.
+
+
+---
+
+🔹 Alors quel est le lien entre les deux ?
+
+La vente utilise l’inventaire, mais ne le remplace pas.
+
+👉 Dans une application bien conçue :
+
+la vente déclenche une sortie de stock,
+
+l’inventaire met à jour les quantités,
+
+la gestion des ventes continue son cycle (facture, paiement).
+
+
+
+---
+
+🔹 Et par rapport aux autres “gestions” ?
+
+Oui, il existe plusieurs gestions distinctes :
+
+gestion d’inventaire
+
+gestion de stock
+
+gestion des ventes
+
+gestion des achats
+
+gestion financière / comptable
+
+gestion des clients
+
+
+👉 Ensemble, elles forment souvent un ERP.
+
+
+---
+
+🧠 Conclusion claire
+
+> La gestion des ventes est une gestion autonome,
+liée à l’inventaire mais conceptuellement différente.
+Une vente provoque une sortie de stock,
+mais la vente ne fait pas partie de la gestion d’inventaire.
+
+
+
+Si tu veux, je peux te faire un schéma global montrant comment toutes ces gestions s’articulent — très utile pour comprendre ou expliquer tout ça.
