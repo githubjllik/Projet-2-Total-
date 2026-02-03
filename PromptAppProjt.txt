@@ -42,6 +42,9 @@ Comme les SMS
 On pourrait suivre tout ce qu'ob possède en temps réel:
  * Tel produit est en stock faible
  * Tel produit est en rupture
+ * Ça fait déjà plus de 1 semaine/mois que ce produit n'a pas bougé (surstockage) ...
+ n'avance pas ...
+ son flux est trop lent...
  * L'agent tel... vient de faire entrée tel quantité de produit, on a desormais ...
  * L'agent tel... vient de faire sortie tel quantité de produit, on a désormais ... 
  * tel agent vient de faire ceci, cela 
@@ -59,6 +62,18 @@ il décroche et le système lui parle :
 " Bonjour/Bonsoir M..., Vos produits... sont en stock faibles il ne reste que tel quantité en stock... vous devez envisager de réapprovisonner avant d'être en cours, merci.."
 En plus de cela une message est envoyé après cet appel pour garantir l'attention, le rappel
 Note : cette fonctionnalité concerne uniquement l'admin ou le responsable d'inventaire/de stock
+
+Concernant l'appel :
+Le système doit tenter d'informer son utilisateur au moins une fois dans la journée :
+- à 7h
+- si non, à 12h
+- si non, à 16h
+- sinon à 21h
+Pourquoi il y'a plusieurs cas :
+1. Car le téléphone peut être éteint
+2. il peut recevoir une appel, au lieu de répondre il n'a pas répondu ou il a cliquer sur annuler 
+Voilà pourquoi on va tenter de l'informer au-moins une fois par appel dans une journée 
+Ceci se fera chaque jour s'il y a toujours des situations de stocks faibles ou de ruptures de stocks.
 
 Concernant la langue de l'application, on utilisera :
 - la langue du système : car dans le téléphone d'un utilisateur, c'est exactement ça qu'il comprend.
@@ -78,6 +93,50 @@ On aura une zone pour :
 - Ajustement/modifier/Corriger (concernant le produit dont ont veux mettre à jour ses informations comme : le nom, le prix, l'emplacement,...)
 - Administrer (créer des postes, des rôles, des droits, gérer les employés)
 - Feuille d'inventaire
+
+Bref :
+- Entrée
+- Sortie
+- Détails produits
+- Feuille inventaire
+
+
+ESPACE CONNEXION:
+Première connexion admin :
+l'app demande un Qr code 
+Pas de compte
+- entre le nom 
+accès à l'app, accès full vu qu'il est l'admin (Notre ADAM dans l'application)
+ESPACE Equipe :
+"travaillez en équipe ..."
+il aura des postes 
+chaque poste a son Qr code et ses propriétés
+et chaque Qr code d'un poste est unique, il est recommandé de régénérer un Qr code même s'il s'agit d'un même poste car c'est impossible que 2 utilisateurs y accèdent par un même qr code (Par Sécurité).
+L'app dit à l'admin de partager l'app à celui avec qui il soit travailler 
+
+L'autre membre arrive dans l'app 
+vu qu'il y a déjà un admin 
+L'app lui demande de scanner le qr code lié à son poste chez l'admin 
+- ou alors d'importer le qr code s'il a déjà comme image dans sa galerie
+- Ensuite il lui demande son nom complet
+- L'autre membre peut alors accéder à l'interce limités par son poste 
+- Dans son espace "Moi", il verra ses informations : son profil, nom, et son qr code unique lié à son poste, il doit enregistre ce qr code dans sa galerie/stockage interne avant de quitter ou alors ça se télécharge automatique et lors de la connexion, si l'utilisateur se perd ça va lui indiquer le chemin pour trouver son qr code.
+- Toujours dans "Moi" il y a une recommandation, qui consiste à demander à l'utilisateur de lier son compte actuel en scannant le qr code de sa carte de l'électeur/d'identité afin de pouvoir y accéder par ce moyen. c'est obligatoire sans ça il ne peut pas se déconnecter, car lors de la prochaine connexion il pourra utiliser ça pour retrouver son compte.
+Ça sera de même chez tous les utilisateurs, les admin y compris
+
+L'admin peut voir la liste des membres , il peut alors :
+- Promouvoir 
+- Retirer 
+
+Lorsqu'un membre est promu, son Qr code aussi change dans "Moi" ,il obtient un nouveau Qr code d'accès. L'ancien devient obsolète.
+Le Qr code de la carte d'électeur/identité n'a pas besoin d'être modifier, vu que c'est un moyen de secours.
+
+
+Moi :
+- Moi 
+- Mes subordonnés (apparait chez l'admin)
+
+Travaillez en équipe, repartissez les taches, accroitre la productivité
 
 
 ENTREE :
@@ -103,6 +162,14 @@ CAS DE Sortie :
 - Produit non enregistrée détectée = À signaler 
 Car pour faire sortie un produit, faut qu'il soit d'abord entrée/enregistrée.
 
+
+Le UI/UX doit tenir compte de ces facteurs ci-dessous:
+- Des personnes ayant des problèmes de vues
+- Des personnes ayant du mal avec les textes trop longs
+- Des personnes avec des gros doigts (cas des boutons, zones de clics)
+- Des personnes ayant la flemme de lire (Qui n'aime pas trop lire)
+- Des personnes qui se démotive ou se fatigue vite face à trop d'informations ou trop des demandes à la fois.
+
 Faut donner des noms en français:
 - que ce soit les noms des fichiers
 - que ce soit les noms dans les codes (fonctions, variables, constantes,...)
@@ -121,4 +188,4 @@ Faut interpréter ce que fais un code, exemple :
 - ce code sert à ouvrir ....
 - ce code permet d'enregister... dans...
 - ce code permet à l'utilisateur de ...
-Surtout avec les éléments d'interfacz
+Surtout avec les éléments d'interface 
