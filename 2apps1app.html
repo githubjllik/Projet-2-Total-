@@ -1,0 +1,202 @@
+Oui, je connais 1DM (1DM+: Browser & Downloader) 👍
+Ce que tu décris est un vrai concept Android, pas un bug ni un truc bizarre.
+
+Je vais répondre clairement et proprement, point par point.
+
+
+---
+
+1️⃣ Comment appelle-t-on ça ?
+
+👉 Une application Android avec plusieurs activités exposées
+
+Ou plus précisément :
+
+🔹 Une application modulaire avec plusieurs “launchers” (points de lancement)
+
+Dans le vocabulaire Android :
+
+Une seule application (un seul APK / package name)
+
+Plusieurs Activities
+
+Plus d’une Activity déclarée comme “launcher”
+
+
+👉 Résultat :
+
+Android affiche plusieurs icônes sur l’écran
+
+Mais tout appartient à la même application
+
+
+
+---
+
+2️⃣ Pourquoi Android affiche 2 applications ?
+
+Parce que :
+
+Une Activity principale = interface de téléchargement
+
+Une Activity navigateur = navigateur intégré
+
+Les deux sont déclarées comme MAIN + LAUNCHER dans le AndroidManifest.xml
+
+
+Exemple simplifié :
+
+<activity android:name=".MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+<activity android:name=".BrowserActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+👉 Android pense donc :
+
+> “Ah, il y a deux points d’entrée → j’affiche deux icônes”
+
+
+
+
+---
+
+3️⃣ Ce que 1DM fait exactement
+
+✅ Un seul APK
+
+✅ Un seul espace de données
+
+✅ Navigation interne entre interfaces
+
+✅ Deux icônes visibles
+
+✅ Retour possible app ⇄ navigateur
+
+❌ Ce ne sont PAS deux apps indépendantes
+
+
+C’est une seule application multi-interface.
+
+
+---
+
+4️⃣ Comment on appelle ce concept (termes corrects)
+
+Tu peux utiliser ces termes (dans un projet ou rapport) :
+
+📌 Termes techniques
+
+Application Android à activités multiples
+
+Application avec plusieurs points de lancement
+
+Application modulaire
+
+Application avec navigateur intégré
+
+Application à interface duale
+
+
+📌 Formulation simple (académique)
+
+> Une application mobile disposant de plusieurs interfaces accessibles indépendamment via des icônes distinctes, tout en partageant un même noyau applicatif.
+
+
+
+
+---
+
+5️⃣ Est-ce faisable avec Flutter ?
+
+✅ OUI, totalement faisable avec Flutter
+
+Mais attention 👇
+
+Flutter seul ❌
+
+Flutter ne gère qu’une seule Activity par défaut
+
+
+Flutter + Android natif ✅
+
+Tu utilises Flutter
+
+Tu modifies le dossier android/ manuellement
+
+Tu ajoutes une deuxième Activity Android
+
+Chaque Activity peut :
+
+lancer Flutter
+
+ou afficher une interface native
+
+ou ouvrir une page Flutter différente
+
+
+
+👉 Exactement comme 1DM.
+
+
+---
+
+6️⃣ Architecture possible en Flutter
+
+Option recommandée (pro) :
+
+1 app Flutter
+
+2 Activities Android
+
+1 moteur Flutter partagé
+
+2 icônes launcher
+
+Navigation Flutter ↔ Android native
+
+
+Schéma :
+
+[ Icône App principale ]
+        ↓
+   Flutter UI (Téléchargements)
+
+[ Icône Navigateur ]
+        ↓
+   Browser Activity (WebView)
+        ↓
+   Retour Flutter
+
+
+---
+
+7️⃣ Conclusion claire
+
+✔ Ce n’est PAS deux applications
+✔ Ce n’est PAS une duplication
+✔ C’est une seule application Android
+✔ Avec plusieurs Activities exposées
+✔ Faisable avec Flutter (niveau intermédiaire)
+
+
+---
+
+Si tu veux, je peux :
+
+t’aider à nommer ce concept pour un projet académique
+
+te proposer une architecture Flutter + Android
+
+ou te montrer comment créer deux icônes pour une seule app Flutter
+
+
+Dis-moi juste ce que tu veux faire ensuite 👌

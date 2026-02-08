@@ -138,6 +138,10 @@ Moi :
 
 Travaillez en équipe, repartissez les taches, accroitre la productivité
 
+TYPES DE SCAN ;
+- scan +1 
+- scan + saisie quantité
+
 
 ENTREE :
 Lorsqu'on scanne une entrée :

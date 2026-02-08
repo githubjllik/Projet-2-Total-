@@ -1,0 +1,84 @@
+"""""
+Comment ça va détecter quand il y'a des écarts, vols, cassés, erreursComment ça va détecter quand il y'a des écarts, vols, cassés, erreurs
+"""""
+
+Un inventaire détecte les écarts, vols, casses et erreurs en comparant systématiquement le théorique et le réel, avec des mécanismes de contrôle précis.
+
+1. Comparaison stock théorique / stock physique
+
+Stock théorique : quantité enregistrée dans le système (après entrées/sorties).
+
+Stock physique : quantité réellement constatée lors du comptage.
+
+Toute différence = écart à analyser.
+
+
+2. Inventaires réguliers
+
+Inventaire périodique (mensuel, annuel) ou inventaire tournant.
+
+Plus les contrôles sont fréquents, plus les anomalies sont détectées tôt.
+
+
+3. Traçabilité des mouvements
+
+Enregistrement obligatoire de chaque entrée, sortie, transfert.
+
+Historique : qui a fait quoi, quand, sur quel article.
+
+Permet d’identifier une erreur humaine ou un usage anormal.
+
+
+4. Seuils et alertes
+
+Alertes automatiques en cas de :
+
+stock négatif,
+
+variation anormale,
+
+consommation excessive,
+
+taux de casse inhabituel.
+
+
+
+5. Catégorisation des écarts
+
+Lors du comptage, les écarts sont qualifiés :
+
+Vol : sortie non enregistrée.
+
+Casse / perte : produit endommagé ou périmé.
+
+Erreur : mauvaise saisie, unité incorrecte, double comptage.
+
+
+6. Séparation des rôles
+
+Une personne saisit les mouvements.
+
+Une autre réalise le comptage.
+
+Réduit les fraudes et erreurs intentionnelles.
+
+
+7. Outils d’aide
+
+Codes-barres / QR codes / RFID pour limiter les erreurs.
+
+Photos, signatures, commentaires lors des ajustements.
+
+Rapports d’écarts et indicateurs (taux de démarque).
+
+
+8. Actions correctives
+
+Ajustement du stock justifié.
+
+Correction des procédures.
+
+Sanctions ou renforcement des contrôles si nécessaire.
+
+
+En résumé, la détection repose sur la comparaison réel/théorique, la traçabilité, et des contrôles réguliers appuyés par des règles et outils adaptés.
